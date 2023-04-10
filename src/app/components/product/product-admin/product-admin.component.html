@@ -1,0 +1,53 @@
+<div class="">
+  <table [dataSource]="productDetails" class="mat-elevation-z8" mat-table>
+    <ng-container matColumnDef="Id">
+      <th *matHeaderCellDef mat-header-cell>Id</th>
+      <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nombre">
+      <th *matHeaderCellDef mat-header-cell>Nombre</th>
+      <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Precio">
+      <th *matHeaderCellDef mat-header-cell>Precio</th>
+      <td *matCellDef="let element" mat-cell>{{ element.price }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Sku">
+      <th *matHeaderCellDef mat-header-cell>Categoria</th>
+      <td *matCellDef="let element" mat-cell>{{ element.sku }}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Editar">
+      <th *matHeaderCellDef mat-header-cell>Editar</th>
+      <td *matCellDef="let element" mat-cell>
+        <button
+          color="primary"
+          mat-icon-button
+
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Eliminar">
+      <th *matHeaderCellDef mat-header-cell>Eliminar</th>
+      <td *matCellDef="let element" mat-cell>
+        <button
+          color="warn"
+          mat-icon-button
+
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+  </table>
+</div>

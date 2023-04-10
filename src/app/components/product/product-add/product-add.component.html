@@ -1,0 +1,29 @@
+<h2 class="text-center">Agregar producto</h2>
+<div class="d-flex p-3 flex-row justify-content-center">
+  <form (ngSubmit)="onSubmit()" [formGroup]="productForm" novalidate>
+    <div class="form-group  mt-1">
+      <label class="center-block">Name:
+        <input class="form-control" formControlName="name">
+      </label>
+    </div>
+    <div class="form-group  mt-1">
+      <label class="center-block">Precio:
+        <input class="form-control" formControlName="precio">
+      </label>
+    </div>
+    <div class="form-group mt-1">
+      <label class="center-block">Sku:
+        <input class="form-control" formControlName="sku">
+      </label>
+    </div>
+
+    <div class="mt-2">
+      <button [disabled]="productForm.pristine"
+              class="btn btn-success" type="submit">Agregar Producto
+      </button> &nbsp;
+      <button (click)="revert()" [disabled]="productForm.pristine"
+              class="btn btn-danger" type="reset">Limpiar Formulario
+      </button>
+    </div>
+  </form>
+</div>

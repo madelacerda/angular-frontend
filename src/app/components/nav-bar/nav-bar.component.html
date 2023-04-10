@@ -1,17 +1,30 @@
-<mat-toolbar>
-  <button [matMenuTriggerFor]="belowMenu" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <a href="/" style="text-decoration: none">
-  <span>Angular + Grails</span>
-  </a>
-  <span class="example-spacer"></span>
-
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button>
-      Productos
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Angular + Grails</a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
     </button>
-
-
-  </mat-menu>
-</mat-toolbar>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a aria-current="page" class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a aria-expanded="false" class="nav-link dropdown-toggle" ngbDropdownToggle
+             role="button">
+            Productos
+          </a>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="administrar-productos">Administrar productos</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem routerLink="productos">Listar productos</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem routerLink="agregar-producto">Agregar producto</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
