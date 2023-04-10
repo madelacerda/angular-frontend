@@ -25,9 +25,9 @@
       <th *matHeaderCellDef mat-header-cell>Editar</th>
       <td *matCellDef="let element" mat-cell>
         <button
+          (click)="editProductDetails(element)"
           color="primary"
           mat-icon-button
-
         >
           <mat-icon>edit</mat-icon>
         </button>
@@ -38,6 +38,7 @@
       <th *matHeaderCellDef mat-header-cell>Eliminar</th>
       <td *matCellDef="let element" mat-cell>
         <button
+          (click)="deleteProduct(element.id)"
           color="warn"
           mat-icon-button
 

@@ -21,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductAdminComponent } from './components/product/product-admin/product-admin.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MatTableModule } from '@angular/material/table';
     NgbModule,
     ReactiveFormsModule,
     MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

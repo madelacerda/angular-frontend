@@ -26,11 +26,11 @@ export class ConfigService {
     return this.http.post<Product>(`${this.productURL}`, product);
   }
 
-  public editProduct(product: Product) {
-    return this.http.put<Product>(`${this.productURL}/` + product._id, product);
+  public deleteProduct(productId: any) {
+    return this.http.delete(`${this.productURL}` + productId, productId);
   }
 
-  public getProductbyId(product: Product) {
-    return this.http.get<Product>(`${this.productURL}/` + product._id);
+  public editProduct(productId: any, body: any) {
+    return this.http.put<Product>(`${this.productURL}` + productId, body);
   }
 }
