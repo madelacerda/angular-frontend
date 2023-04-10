@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <button [matMenuTriggerFor]="belowMenu" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a href="/" style="text-decoration: none">
+  <span>Angular + Grails</span>
+  </a>
+  <span class="example-spacer"></span>
+
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button>
+      Productos
+    </button>
+
+
+  </mat-menu>
+</mat-toolbar>
