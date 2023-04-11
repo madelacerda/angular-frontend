@@ -55,8 +55,8 @@ export class ProductEditComponent {
   }
 
   onSubmit() {
-    const body = 'Quieres agregar este producto';
-    this.modalService.confirm(body).subscribe((confirm) => {
+
+    this.modalService.confirm().subscribe((confirm) => {
       if (confirm) {
         this.product = this.prepareSaveProduct();
         console.log(this.prepareSaveProduct());
@@ -73,7 +73,7 @@ export class ProductEditComponent {
     return {
       id: formModel.id as number,
       name: formModel.name as string,
-      price: formModel.precio,
+      price: formModel.precio ,
       sku: formModel.sku,
     };
   }
