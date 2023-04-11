@@ -8,6 +8,20 @@ import Swal from 'sweetalert2';
 export class ModalService {
   constructor() {}
 
+  success(body = 'Operación realizada con éxito') {
+    Swal.fire({
+      icon: 'success',
+      text: body,
+    });
+  }
+
+  error(body = 'Error interno') {
+    Swal.fire({
+      icon: 'error',
+      text: body,
+    });
+  }
+
   confirm(body = '¿Estas seguro/a?') {
     return new Observable((observer) => {
       Swal.fire({
