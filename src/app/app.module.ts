@@ -22,6 +22,7 @@ import { ProductEditComponent } from './components/product/product-edit/product-
 import { ProductAdminComponent } from './components/product/product-admin/product-admin.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     ProductAddComponent,
     ProductEditComponent,
     ProductAdminComponent,
+    CustomerListComponent,
   ],
   imports: [
     BrowserModule,

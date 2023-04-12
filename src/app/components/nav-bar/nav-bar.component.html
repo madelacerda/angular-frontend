@@ -24,6 +24,19 @@
             <button ngbDropdownItem routerLink="agregar-producto">Agregar producto</button>
           </div>
         </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a aria-expanded="false" class="nav-link dropdown-toggle" ngbDropdownToggle
+             role="button">
+            Customer
+          </a>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="administrar-productos">Administrar Customer</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem routerLink="customers">Listar Customer</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem routerLink="agregar-producto">Agregar Customer</button>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="d-flex align-items-center">
